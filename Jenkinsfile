@@ -57,7 +57,6 @@ pipeline {
                 script {
                     def services = ['order-service', 'product-service', 'user-service']
                     withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG_FILE')]) {
-                        env.KUBECONFIG = KUBECONFIG_FILE
                         services.each { svc ->
                             dir("${svc}/k8s") {
                                 sh "kubectl apply -f deployment.yaml"
