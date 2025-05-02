@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('docker-hub-credentials')
-        DOCKER_HUB_USER = 'samimmondal'
+        DOCKER_HUB_USER = 'bhargavakulla'
     }
 
     stages {
